@@ -1,0 +1,17 @@
+<h1> הכנס מספר N</h1>
+<mat-form-field class="example-form-field" appearance="fill">
+    <mat-label>Clearable input</mat-label>
+    <input matInput type="number" [(ngModel)]="value" (click)="getN()">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  {{combinationCount}} מספר תוצאות :
+<div *ngIf="combinationCount">
+  <button  mat-button color="primary"  (click)="getData()">לכל הקומבינציות</button>
+  <button mat-button color="primary" (click)="getNext()">הבא </button>
+   </div>
+  <button mat-button color="primary" (click)="clear()">ניקוי </button>
+
+
+  {{currentArray}}
